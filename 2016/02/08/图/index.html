@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="日记," />
+  <meta name="keywords" content="algs4,java," />
 
 
 
@@ -57,19 +57,17 @@
 
 
 
-<meta name="description" content="照理说，程序猿做出的第一个产品都会以Hello World命名，不管是调成功了一段代码，还是学会了一种语言，或者是学会了别人开发的应用，Hello World似乎成为了“开头”的代名词。然而，我更多的是想在这一片网络中留下更多自己的想法，我深知自己和技术大牛之间的差距，我也从来没有写过任何技术文档(至少在这之前)，但是，毕竟每个人都有自己的思维，与他人与众不同的地方。
-我的看法是，程序猿并不只是代">
+<meta name="description" content="图模型1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253 /* * 		基于邻接表（Bag）的图模型 * */import java.util.Scanner;public class Graph &amp;#123;	private static final S">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一次记录">
-<meta property="og:url" content="http://yoursite.com/2016/01/22/第一次记录/index.html">
+<meta property="og:title" content="图">
+<meta property="og:url" content="http://yoursite.com/2016/02/08/图/index.html">
 <meta property="og:site_name" content="Iris">
-<meta property="og:description" content="照理说，程序猿做出的第一个产品都会以Hello World命名，不管是调成功了一段代码，还是学会了一种语言，或者是学会了别人开发的应用，Hello World似乎成为了“开头”的代名词。然而，我更多的是想在这一片网络中留下更多自己的想法，我深知自己和技术大牛之间的差距，我也从来没有写过任何技术文档(至少在这之前)，但是，毕竟每个人都有自己的思维，与他人与众不同的地方。
-我的看法是，程序猿并不只是代">
-<meta property="og:updated_time" content="2016-01-22T15:58:33.295Z">
+<meta property="og:description" content="图模型1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253 /* * 		基于邻接表（Bag）的图模型 * */import java.util.Scanner;public class Graph &amp;#123;	private static final S">
+<meta property="og:image" content="http://yoursite.com/images/dfs.png">
+<meta property="og:updated_time" content="2016-02-07T17:30:48.974Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一次记录">
-<meta name="twitter:description" content="照理说，程序猿做出的第一个产品都会以Hello World命名，不管是调成功了一段代码，还是学会了一种语言，或者是学会了别人开发的应用，Hello World似乎成为了“开头”的代名词。然而，我更多的是想在这一片网络中留下更多自己的想法，我深知自己和技术大牛之间的差距，我也从来没有写过任何技术文档(至少在这之前)，但是，毕竟每个人都有自己的思维，与他人与众不同的地方。
-我的看法是，程序猿并不只是代">
+<meta name="twitter:title" content="图">
+<meta name="twitter:description" content="图模型1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253 /* * 		基于邻接表（Bag）的图模型 * */import java.util.Scanner;public class Graph &amp;#123;	private static final S">
 
 
 
@@ -87,7 +85,7 @@
   };
 </script>
 
-  <title> 第一次记录 | Iris </title>
+  <title> 图 | Iris </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -227,7 +225,7 @@
             
             
               
-                第一次记录
+                图
               
             
           </h1>
@@ -239,8 +237,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-22T23:28:39+08:00" content="2016-01-22">
-              2016-01-22
+            <time itemprop="dateCreated" datetime="2016-02-08T01:26:11+08:00" content="2016-02-08">
+              2016-02-08
             </time>
           </span>
 
@@ -253,8 +251,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/日记/" itemprop="url" rel="index">
-                    <span itemprop="name">日记</span>
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
                   </a>
                 </span>
 
@@ -284,13 +282,16 @@
       
 
       
-        <p>照理说，程序猿做出的第一个产品都会以Hello World命名，不管是调成功了一段代码，还是学会了一种语言，或者是学会了别人开发的应用，Hello World似乎成为了“开头”的代名词。然而，我更多的是想在这一片网络中留下更多自己的想法，我深知自己和技术大牛之间的差距，我也从来没有写过任何技术文档(至少在这之前)，但是，毕竟每个人都有自己的思维，与他人与众不同的地方。</p>
-<p>我的看法是，程序猿并不只是代码的代名词，计算机深受人文科学的影响，包括编程语言的设计,模式的设计等等，或多或少都体现着人文理念。就拿面向对象编程的思想来说，这就和柏拉图的“理型”思维不谋而合，柏拉图认为世间万物都有着一个完美的“型”，而单个的物体只是这种“型”的不完美对象，这或多或少和“类与对象”的观念有些类似。</p>
-<p>我一直相信，想要在单一的学科取得巨大的创新与突破是需要毅力与灵感的，与之相反的，如果能够尝试把两种或更多不是特别相关的学科结合，那么在创新与发现上将会容易得多。这篇文章如果能够作为自己研究哲学与具体科学结合的开端，那一定是再好不过了。</p>
-<p>文章的结尾，我想引用一下笛卡尔的名言，作为启迪也好，勉励也罢，希望能多让自己思考。</p>
-<blockquote>
-<p>cogito ergosum</p>
-</blockquote>
+        <ol>
+<li><h3 id="u56FE_u6A21_u578B"><a href="#u56FE_u6A21_u578B" class="headerlink" title="图模型"></a>图模型</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/*</span><br><span class="line"> * 		基于邻接表（Bag）的图模型</span><br><span class="line"> * */</span></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Graph</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String NEWLINE = System.getProperty(<span class="string">"line.separator"</span>);</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> V;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> E;</span><br><span class="line">	<span class="keyword">private</span> Bag&lt;Integer&gt;[] adj;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Graph</span><span class="params">(<span class="keyword">int</span> V)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.V=V;</span><br><span class="line">		<span class="keyword">this</span>.E=<span class="number">0</span>;</span><br><span class="line">		adj=(Bag&lt;Integer&gt;[] )<span class="keyword">new</span> Bag[V];<span class="comment">//初始化</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> v=<span class="number">0</span>;v&lt;V;v++)</span><br><span class="line">			adj[v]=<span class="keyword">new</span> Bag&lt;Integer&gt;();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Graph</span><span class="params">(Scanner in)</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>(in.nextInt());</span><br><span class="line">		<span class="keyword">int</span> E=in.nextInt();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;E;i++)&#123;</span><br><span class="line">			<span class="keyword">int</span> v=in.nextInt();</span><br><span class="line">			<span class="keyword">int</span> w=in.nextInt();</span><br><span class="line">			addEdge(v,w);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addEdge</span><span class="params">(<span class="keyword">int</span> v,<span class="keyword">int</span> w)</span></span>&#123;</span><br><span class="line">		adj[v].add(w);</span><br><span class="line">		adj[w].add(v);</span><br><span class="line">		E++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">V</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> V;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">E</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> E;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//adj不是普通数组，是Bag对象,实现了Iterable接口</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Iterable&lt;Integer&gt; <span class="title">adj</span><span class="params">(<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> adj[v];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        StringBuilder s = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        s.append(V + <span class="string">" vertices, "</span> + E + <span class="string">" edges "</span> + NEWLINE);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> v = <span class="number">0</span>; v &lt; V; v++) &#123;</span><br><span class="line">            s.append(v + <span class="string">": "</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> w : adj[v]) &#123;</span><br><span class="line">                s.append(w + <span class="string">" "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            s.append(NEWLINE);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h3 id="u6DF1_u5EA6_u4F18_u5148_u641C_u7D22"><a href="#u6DF1_u5EA6_u4F18_u5148_u641C_u7D22" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/*</span><br><span class="line"> * 		深度优先搜索</span><br><span class="line"> * */</span></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DepthFirstSearch</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span>[] marked;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> count;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">DepthFirstSearch</span><span class="params">(Graph g,<span class="keyword">int</span> s)</span></span>&#123;</span><br><span class="line">		marked=<span class="keyword">new</span> <span class="keyword">boolean</span>[g.V()];</span><br><span class="line">		dfs(g,s);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(Graph g,<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">		count++;</span><br><span class="line">		marked[v]=<span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> w:g.adj(v))</span><br><span class="line">			<span class="keyword">if</span>(!marked(w))</span><br><span class="line">				dfs(g,w);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">count</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> count;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">marked</span><span class="params">(<span class="keyword">int</span> v)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> marked[v];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">		Scanner in=<span class="keyword">new</span> Scanner(<span class="keyword">new</span> File(<span class="string">"D:\\Documents\\Project\\algsLearning\\algs4-data\\mediumG.txt"</span>));</span><br><span class="line">		Graph g=<span class="keyword">new</span> Graph(in);</span><br><span class="line">		DepthFirstSearch search=<span class="keyword">new</span> DepthFirstSearch(g,<span class="number">11</span>);</span><br><span class="line">		System.out.println(search.count());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ol>
+<li><center>深度优先搜索轨迹(0为起点)</center><br><img src="/images/dfs.png" alt=""></li>
+</ol>
+</li>
+</ol>
 
       
     </div>
@@ -299,7 +300,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/日记/" rel="tag">#日记</a>
+            <a href="/tags/algs4/" rel="tag">#algs4</a>
+          
+            <a href="/tags/java/" rel="tag">#java</a>
           
         </div>
       
@@ -308,13 +311,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/01/31/查找/" rel="next" title="查找">
+                <i class="fa fa-chevron-left"></i> 查找
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/27/java数据结构/" rel="prev" title="java数据结构">
-                java数据结构 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -428,7 +431,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u56FE_u6A21_u578B"><span class="nav-number">1.</span> <span class="nav-text">图模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6DF1_u5EA6_u4F18_u5148_u641C_u7D22"><span class="nav-number">2.</span> <span class="nav-text">深度优先搜索</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
