@@ -71,7 +71,8 @@
 <meta property="og:image" content="http://yoursite.com/images/MSD_1.png">
 <meta property="og:image" content="http://yoursite.com/images/MSD_2.png">
 <meta property="og:image" content="http://yoursite.com/images/MSD_3.png">
-<meta property="og:updated_time" content="2016-02-11T16:59:01.623Z">
+<meta property="og:image" content="http://yoursite.com/images/violence_search.png">
+<meta property="og:updated_time" content="2016-02-12T03:10:26.774Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字符串">
 <meta name="twitter:description" content="低位优先字符串排序12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152 /* * 		基于键索引计数法的低位优先字符串排序 * 1.键索引计数法能够将频率转换为有序数组的关键在于， * 	有一个根据键（count[R+1]）作索引的数组，已经根据键将 * 	进制">
@@ -308,6 +309,12 @@
 <li><center>递归调用轨迹</center><br><img src="/images/MSD_3.png" alt=""></li>
 </ol>
 </li>
+<li><h3 id="u66B4_u529B_u641C_u7D22_u5339_u914D_u5B57_u7B26_u4E32"><a href="#u66B4_u529B_u641C_u7D22_u5339_u914D_u5B57_u7B26_u4E32" class="headerlink" title="暴力搜索匹配字符串"></a>暴力搜索匹配字符串</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/*</span><br><span class="line"> * 		暴力搜索</span><br><span class="line"> * @param i:指向文本的指针</span><br><span class="line"> * @param j:指向模式的指针</span><br><span class="line"> * */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ViolenceSearch</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">sort</span><span class="params">(String pat,String text)</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> M=pat.length();</span><br><span class="line">		<span class="keyword">int</span> N=text.length();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=N-M;i++)&#123;</span><br><span class="line">			<span class="keyword">int</span> j;</span><br><span class="line">			<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;M;j++)</span><br><span class="line">				<span class="keyword">if</span>(text.charAt(i+j)!=pat.charAt(j))</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">if</span>(j==M)	<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> N;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(sort(<span class="string">"AAAAAAAAAB"</span>,<span class="string">"AAAAB"</span>));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ol>
+<li><center>搜索轨迹</center><br><img src="/images/violence_search.png" alt=""></li>
+</ol>
+</li>
 </ol>
 
       
@@ -448,7 +455,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4F4E_u4F4D_u4F18_u5148_u5B57_u7B26_u4E32_u6392_u5E8F"><span class="nav-number">1.</span> <span class="nav-text">低位优先字符串排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u9AD8_u4F4D_u4F18_u5148_u5B57_u7B26_u4E32_u6392_u5E8F"><span class="nav-number">2.</span> <span class="nav-text">高位优先字符串排序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4F4E_u4F4D_u4F18_u5148_u5B57_u7B26_u4E32_u6392_u5E8F"><span class="nav-number">1.</span> <span class="nav-text">低位优先字符串排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u9AD8_u4F4D_u4F18_u5148_u5B57_u7B26_u4E32_u6392_u5E8F"><span class="nav-number">2.</span> <span class="nav-text">高位优先字符串排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u66B4_u529B_u641C_u7D22_u5339_u914D_u5B57_u7B26_u4E32"><span class="nav-number">3.</span> <span class="nav-text">暴力搜索匹配字符串</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
