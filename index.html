@@ -232,6 +232,132 @@
             
               
                 
+                <a class="post-title-link" href="/2016/02/27/scikit-learn/" itemprop="url">
+                  scikit-learn
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-27T14:47:52+08:00" content="2016-02-27">
+              2016-02-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Machine-Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Machine Learning</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><h1 id="u76D1_u7763_u5B66_u4E60"><a href="#u76D1_u7763_u5B66_u4E60" class="headerlink" title="监督学习"></a>监督学习</h1><ol>
+<li><h2 id="u5E7F_u4E49_u7EBF_u6027_u6A21_u578B"><a href="#u5E7F_u4E49_u7EBF_u6027_u6A21_u578B" class="headerlink" title="广义线性模型"></a>广义线性模型</h2><p>线性模型概要<br><img src="http://i.imgur.com/bKwwt68.png" alt=""></p>
+<ol>
+<li><h3 id="u666E_u901A_u6700_u5C0F_u4E8C_u4E58"><a href="#u666E_u901A_u6700_u5C0F_u4E8C_u4E58" class="headerlink" title="普通最小二乘"></a>普通最小二乘</h3><p><img src="http://i.imgur.com/zxfMxMG.png" alt=""><br>LinearRegression类</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">sklearn.linear_model.LinearRegression(fit_intercept=<span class="literal">True</span>, normalize=<span class="literal">False</span>, copy_X=<span class="literal">True</span>, n_jobs=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">Parameters:	</span><br><span class="line"><span class="constant">@fit_intercept</span> : boolean, optional</span><br><span class="line">是否拟合截距项w0</span><br><span class="line"><span class="constant">@normalize</span> : boolean, optional(可选择的), <span class="keyword">default</span> <span class="literal">False</span></span><br><span class="line">是否将X归一化(<span class="number">0</span>均值标准化，见代码)</span><br><span class="line">X_mean = np.average(X, axis=<span class="number">0</span>, weights=sample_weight)</span><br><span class="line">          X -= X_mean</span><br><span class="line">          <span class="keyword">if</span> normalize:</span><br><span class="line">              <span class="preprocessor"># XXX: currently scaled to variance=n_samples</span></span><br><span class="line">              X_std = np.<span class="built_in">sqrt</span>(np.sum(X ** <span class="number">2</span>, axis=<span class="number">0</span>))</span><br><span class="line">              X_std[X_std == <span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">              X /= X_std</span><br><span class="line"><span class="constant">@copy_X</span> : boolean, optional, <span class="keyword">default</span> <span class="literal">True</span></span><br><span class="line">是否复制输入向量X</span><br><span class="line"><span class="constant">@n_jobs</span> : <span class="built_in">int</span>, optional, <span class="keyword">default</span> <span class="number">1</span></span><br><span class="line">The <span class="built_in">number</span> of jobs <span class="keyword">to</span> use <span class="keyword">for</span> the computation(估计). <span class="keyword">If</span> -<span class="number">1</span> all CPUs are used. This will only provide speedup(加速) <span class="keyword">for</span> n_targets &gt; <span class="number">1</span> <span class="literal">and</span> sufficient(足够的) large problems.</span><br><span class="line"></span><br><span class="line">Attributes:	</span><br><span class="line"><span class="constant">@coef_</span> : array, shape (n_features, ) <span class="literal">or</span> (n_targets, n_features)</span><br><span class="line">估计系数</span><br><span class="line"><span class="constant">@intercept_</span> : array</span><br><span class="line">截距项</span><br></pre></td></tr></table></figure>
+<p>fit</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">fit(X, y, sample_weight=None<span class="function">)</span></span><br><span class="line"></span><br><span class="line">Parameters:	</span><br><span class="line">X<span class="keyword"> :</span> numpy<span class="instruction"> array </span>or<span class="instruction"> sparse </span>matrix of shape <span class="keyword">[</span>n_samples,n_features]</span><br><span class="line">Training data</span><br><span class="line">y<span class="keyword"> :</span> numpy<span class="instruction"> array </span>of shape <span class="keyword">[</span>n_samples, n_targets]</span><br><span class="line">Target values</span><br><span class="line">sample_weight<span class="keyword"> :</span> numpy<span class="instruction"> array </span>of shape <span class="keyword">[</span>n_samples]</span><br><span class="line">每一个样本的独立权重</span><br><span class="line">New in version 0.17: parameter sample_weight support to LinearRegression.</span><br><span class="line">Returns:	</span><br><span class="line">self<span class="keyword"> :</span> returns an<span class="instruction"> instance </span>of self.</span><br></pre></td></tr></table></figure>
+<p>predict</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">predict(X<span class="function">)</span></span><br><span class="line"></span><br><span class="line">Parameters:	</span><br><span class="line">X<span class="keyword"> :</span> &#123;array-like,<span class="instruction"> sparse </span>matrix&#125;, shape =<span class="function"> (</span>n_samples, n_features<span class="function">)</span></span><br><span class="line">Samples.</span><br><span class="line">Returns:	</span><br><span class="line">C<span class="keyword"> :</span> array, shape =<span class="function"> (</span>n_samples,<span class="function">)</span></span><br><span class="line">Returns predicted values.</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn import linear_model</span><br><span class="line">&gt;&gt;&gt; clf = linear_model.<span class="function"><span class="title">LinearRegression</span><span class="params">()</span></span></span><br><span class="line">&gt;&gt;&gt; clf<span class="class">.fit</span> ([[<span class="number">0</span>, <span class="number">0</span>], [<span class="number">1</span>, <span class="number">1</span>], [<span class="number">2</span>, <span class="number">2</span>]], [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line"><span class="function"><span class="title">LinearRegression</span><span class="params">(copy_X=True, fit_intercept=True, n_jobs=<span class="number">1</span>, normalize=False)</span></span></span><br><span class="line">&gt;&gt;&gt; clf<span class="class">.coef_</span></span><br><span class="line"><span class="function"><span class="title">array</span><span class="params">([ <span class="number">0.5</span>,  <span class="number">0.5</span>])</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="built_in">print</span>(__doc__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Code source: Jaques Grobler</span></span><br><span class="line"><span class="comment"># License: BSD 3 clause</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line">from sklearn import datasets, linear_model</span><br><span class="line"></span><br><span class="line"><span class="comment"># Load the diabetes dataset</span></span><br><span class="line">diabetes = datasets.load_diabetes()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Use only one feature</span></span><br><span class="line">diabetes_X = diabetes.data[:, np.newaxis, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Split the data into training/testing sets</span></span><br><span class="line">diabetes_X_train = diabetes_X[:-<span class="number">20</span>]</span><br><span class="line">diabetes_X_<span class="built_in">test</span> = diabetes_X[-<span class="number">20</span>:]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Split the targets into training/testing sets</span></span><br><span class="line">diabetes_y_train = diabetes.target[:-<span class="number">20</span>]</span><br><span class="line">diabetes_y_<span class="built_in">test</span> = diabetes.target[-<span class="number">20</span>:]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create linear regression object</span></span><br><span class="line">regr = linear_model.LinearRegression()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Train the model using the training sets</span></span><br><span class="line">regr.fit(diabetes_X_train, diabetes_y_train)</span><br><span class="line"></span><br><span class="line"><span class="comment"># The coefficients</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'Coefficients: \n'</span>, regr.coef_)</span><br><span class="line"><span class="comment"># The mean square error</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Residual sum of squares: %.2f"</span></span><br><span class="line">      % np.mean((regr.predict(diabetes_X_<span class="built_in">test</span>) - diabetes_y_<span class="built_in">test</span>) ** <span class="number">2</span>))</span><br><span class="line"><span class="comment"># Explained variance score: 1 is perfect prediction</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'Variance score: %.2f'</span> % regr.score(diabetes_X_<span class="built_in">test</span>, diabetes_y_<span class="built_in">test</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Plot outputs</span></span><br><span class="line">plt.scatter(diabetes_X_<span class="built_in">test</span>, diabetes_y_<span class="built_in">test</span>,  color=<span class="string">'black'</span>)</span><br><span class="line">plt.plot(diabetes_X_<span class="built_in">test</span>, regr.predict(diabetes_X_<span class="built_in">test</span>), color=<span class="string">'blue'</span>,</span><br><span class="line">         linewidth=<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">plt.xticks(())</span><br><span class="line">plt.yticks(())</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><h1 id="u65E0_u76D1_u7763_u5B66_u4E60"><a href="#u65E0_u76D1_u7763_u5B66_u4E60" class="headerlink" title="无监督学习"></a>无监督学习</h1></li>
+<li><h1 id="u6A21_u578B_u9009_u62E9"><a href="#u6A21_u578B_u9009_u62E9" class="headerlink" title="模型选择"></a>模型选择</h1></li>
+<li><h1 id="u6570_u636E_u96C6_u8F6C_u5316"><a href="#u6570_u636E_u96C6_u8F6C_u5316" class="headerlink" title="数据集转化"></a>数据集转化</h1></li>
+<li><h1 id="u6570_u636E_u52A0_u8F7D"><a href="#u6570_u636E_u52A0_u8F7D" class="headerlink" title="数据加载"></a>数据加载</h1></li>
+<li><h1 id="u5927_u6570_u636E_u8BA1_u7B97_u7B56_u7565"><a href="#u5927_u6570_u636E_u8BA1_u7B97_u7B56_u7565" class="headerlink" title="大数据计算策略"></a>大数据计算策略</h1></li>
+<li><h1 id="u8BA1_u7B97_u6027_u80FD"><a href="#u8BA1_u7B97_u6027_u80FD" class="headerlink" title="计算性能"></a>计算性能</h1></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/02/27/pyplot/" itemprop="url">
                   pyplot
                 </a>
@@ -579,12 +705,13 @@
 <p> 位置参数，默认参数，关键字参数</p>
  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 位置参数必须出现在默认参数之前，可以用关键字参数(调用时指定参数名称)更改</span></span><br><span class="line"><span class="comment"># 调用函数时位置参数的位置。</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(posargs,defarg1=dval1,defarg2=dval2,...)</span>:</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>可变长度的参数:<br> <em>listargs，*</em>dictargs</p>
+<p>可变长度的参数:</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#9;</span><br></pre></td></tr></table></figure>
 </blockquote>
- <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def <span class="function"><span class="keyword">function</span><span class="params">(posargs,defargs,*listargs,**dictargs)</span><span class="type">:</span><br><span class="line"># call</span></span><br><span class="line"><span class="title">function</span><span class="params">(pos,def,list,dict)</span></span></span><br></pre></td></tr></table></figure>
+<p> def function(posargs,defargs,<em>listargs,*</em>dictargs):</p>
+<h1 id="call"><a href="#call" class="headerlink" title="call"></a>call</h1><p> function(pos,def,list,dict)<br> ```</p>
 </li>
-<li><h3 id="u6A21_u5757_u7ED3_u6784_u548C_u5E03_u5C40"><a href="#u6A21_u5757_u7ED3_u6784_u548C_u5E03_u5C40" class="headerlink" title="模块结构和布局"></a>模块结构和布局</h3><p> 所有模块都有能力执行代码，通过<code>__name__</code>属性来区分模块是被导入还是直接执行：</p>
-<ul>
+<li><h3 id="u6A21_u5757_u7ED3_u6784_u548C_u5E03_u5C40"><a href="#u6A21_u5757_u7ED3_u6784_u548C_u5E03_u5C40" class="headerlink" title="模块结构和布局"></a>模块结构和布局</h3> 所有模块都有能力执行代码，通过<code>__name__</code>属性来区分模块是被导入还是直接执行：<ul>
 <li>如果模块是被导入，<code>__name__</code>=moduleName</li>
 <li>如果模块是被直接执行，<code>__name__</code>=’<code>__main__</code>‘</li>
 </ul>
@@ -1407,21 +1534,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
