@@ -57,16 +57,23 @@
 
 
 
-<meta name="description" content="cogito ergosum      ----Descartes">
+<meta name="description" content="ch2:基本图概念 path：A-＞B 祖先（ancestors）：A ，有向图 子孙（descendants）：B，有向图
+ Markov blanket:一个节点的parents，children，children’s parents，不包括自己。MB包含了这个节点的所有信息，所有不属于MB(xi)的节点都与xi在MB(xi)条件下独立。  cycle：有向的路径，起点和终点相同。 loop：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Bayesian Reasoning and Machine Learning">
 <meta property="og:url" content="http://yoursite.com/2016/02/28/Bayesian-Reasoning-and-Machine-Learning/index.html">
 <meta property="og:site_name" content="Iris">
-<meta property="og:description" content="cogito ergosum      ----Descartes">
-<meta property="og:updated_time" content="2016-02-28T14:35:29.189Z">
+<meta property="og:description" content="ch2:基本图概念 path：A-＞B 祖先（ancestors）：A ，有向图 子孙（descendants）：B，有向图
+ Markov blanket:一个节点的parents，children，children’s parents，不包括自己。MB包含了这个节点的所有信息，所有不属于MB(xi)的节点都与xi在MB(xi)条件下独立。  cycle：有向的路径，起点和终点相同。 loop：">
+<meta property="og:image" content="http://i.imgur.com/h8wrtHS.png">
+<meta property="og:image" content="http://i.imgur.com/A7CQmIL.png">
+<meta property="og:image" content="http://i.imgur.com/SEljhWY.png">
+<meta property="og:image" content="http://i.imgur.com/0nCwSZ8.png">
+<meta property="og:updated_time" content="2016-03-02T13:15:08.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bayesian Reasoning and Machine Learning">
-<meta name="twitter:description" content="cogito ergosum      ----Descartes">
+<meta name="twitter:description" content="ch2:基本图概念 path：A-＞B 祖先（ancestors）：A ，有向图 子孙（descendants）：B，有向图
+ Markov blanket:一个节点的parents，children，children’s parents，不包括自己。MB包含了这个节点的所有信息，所有不属于MB(xi)的节点都与xi在MB(xi)条件下独立。  cycle：有向的路径，起点和终点相同。 loop：">
 
 
 
@@ -281,7 +288,20 @@
       
 
       
-        
+        <ol>
+<li><h1 id="ch2_3A_u57FA_u672C_u56FE_u6982_u5FF5"><a href="#ch2_3A_u57FA_u672C_u56FE_u6982_u5FF5" class="headerlink" title="ch2:基本图概念"></a>ch2:基本图概念</h1><p> path：A-＞B<br> 祖先（ancestors）：A ，有向图<br> 子孙（descendants）：B，有向图</p>
+<p> Markov blanket:一个节点的parents，children，children’s parents，不包括自己。MB包含了这个节点的所有信息，所有不属于MB(xi)的节点都与xi在MB(xi)条件下独立。<br> <img src="http://i.imgur.com/h8wrtHS.png" alt=""><br> cycle：有向的路径，起点和终点相同。<br> loop：无向路径，起点和终点相同。<br> chord：在loop中连接不相邻顶点的边。</p>
+<p> 无向图中的概念：<br> clique：所有顶点都相连的集合</p>
+<a id="more"></a>
+</li>
+<li><h1 id="ch3_3ABelief_Networks"><a href="#ch3_3ABelief_Networks" class="headerlink" title="ch3:Belief Networks"></a>ch3:Belief Networks</h1><p> 分布&lt;====&gt;有向无环图(DAG)</p>
+<ul>
+<li>由贝叶斯公式：<br><img src="http://i.imgur.com/A7CQmIL.png" alt=""><br>如果把所有变量级联，那么由贝叶斯得到的DAG是全级联的，没有独立声明，并且是一个DAG。<br><img src="http://i.imgur.com/SEljhWY.png" alt=""></li>
+<li>BN(贝叶斯网络、信念网络、信度网络)<br><img src="http://i.imgur.com/0nCwSZ8.png" alt=""><br>BN的产生方法：删除上图中的任何一条边，都代表一条独立的声明，都能够形成一个BN(当然也可以不删任何一条边.)<br>在BN图结构确立以后，都需要确定对应的CPT(条件概率表)，与p(xi|pa(xi))对应。</li>
+</ul>
+</li>
+</ol>
+
       
     </div>
 
@@ -418,7 +438,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ch2_3A_u57FA_u672C_u56FE_u6982_u5FF5"><span class="nav-number">1.</span> <span class="nav-text">ch2:基本图概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ch3_3ABelief_Networks"><span class="nav-number">2.</span> <span class="nav-text">ch3:Belief Networks</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
