@@ -69,7 +69,11 @@
 <meta property="og:image" content="http://i.imgur.com/A7CQmIL.png">
 <meta property="og:image" content="http://i.imgur.com/SEljhWY.png">
 <meta property="og:image" content="http://i.imgur.com/0nCwSZ8.png">
-<meta property="og:updated_time" content="2016-03-02T13:15:08.204Z">
+<meta property="og:image" content="http://i.imgur.com/d4f6Mio.png">
+<meta property="og:image" content="http://i.imgur.com/4JiEBb3.png">
+<meta property="og:image" content="http://i.imgur.com/GPrdM0h.png">
+<meta property="og:image" content="http://i.imgur.com/ZlpXVxW.png">
+<meta property="og:updated_time" content="2016-03-03T09:44:45.195Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bayesian Reasoning and Machine Learning">
 <meta name="twitter:description" content="ch2:基本图概念 path：A-＞B 祖先（ancestors）：A ，有向图 子孙（descendants）：B，有向图
@@ -298,6 +302,8 @@
 <ul>
 <li>由贝叶斯公式：<br><img src="http://i.imgur.com/A7CQmIL.png" alt=""><br>如果把所有变量级联，那么由贝叶斯得到的DAG是全级联的，没有独立声明，并且是一个DAG。<br><img src="http://i.imgur.com/SEljhWY.png" alt=""></li>
 <li>BN(贝叶斯网络、信念网络、信度网络)<br><img src="http://i.imgur.com/0nCwSZ8.png" alt=""><br>BN的产生方法：删除上图中的任何一条边，都代表一条独立的声明，都能够形成一个BN(当然也可以不删任何一条边.)<br>在BN图结构确立以后，都需要确定对应的CPT(条件概率表)，与p(xi|pa(xi))对应。</li>
+<li>三节点的BN的独立性：<br>collider:<br><img src="http://i.imgur.com/d4f6Mio.png" alt=""><br>non-collider:<br>其中一种non-collider<br><img src="http://i.imgur.com/4JiEBb3.png" alt=""><br><img src="http://i.imgur.com/GPrdM0h.png" alt=""><br>其余三种non-collider和第一种一样<br><img src="http://i.imgur.com/ZlpXVxW.png" alt=""></li>
+<li>多节点的BN的独立性<br>d-connection：<br>Z是条件集，如果X,Y之间存在一条无向路径U，U中的所有collider都在Z中，U中的所有non-collider都不在Z中，那么X，Y关于Z，是d-connection的。反之，是d-separation =&gt; X⊥Y|Z</li>
 </ul>
 </li>
 </ol>
