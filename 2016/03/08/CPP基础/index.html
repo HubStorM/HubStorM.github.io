@@ -67,7 +67,7 @@ cin.get(),cin.getline()  getline()遇到换行符时会丢弃换行符，get()�
 <meta property="og:description" content="IO
 cin使用空格、制表符、换行符来切断输入流。
 cin.get(),cin.getline()  getline()遇到换行符时会丢弃换行符，get()会把换行符保留在输入流中。  123456//getline()原型istream &amp;amp;getline( char *buffer, streamsize num );istream &amp;amp;getline( char *buffer,">
-<meta property="og:updated_time" content="2016-03-09T11:06:14.782Z">
+<meta property="og:updated_time" content="2016-03-09T11:08:50.793Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CPP基础">
 <meta name="twitter:description" content="IO
@@ -294,9 +294,19 @@ cin.get(),cin.getline()  getline()遇到换行符时会丢弃换行符，get()�
 </li>
 </ul>
 </li>
-<li><h1 id="u590D_u5408_u7C7B_u578B"><a href="#u590D_u5408_u7C7B_u578B" class="headerlink" title="复合类型"></a>复合类型</h1></li>
+<li><h1 id="u590D_u5408_u7C7B_u578B"><a href="#u590D_u5408_u7C7B_u578B" class="headerlink" title="复合类型"></a>复合类型</h1><ul>
+<li>c风格字符串<br>  c风格字符串必须以’\0’结尾。  <figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用连续单个字符初始化字符串</span></span><br><span class="line"><span class="keyword">char</span> <span class="keyword">str</span>[<span class="number">5</span>]=&#123;<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'\0'</span>&#125;; <span class="comment">//a string</span></span><br><span class="line"><span class="keyword">char</span> <span class="keyword">str</span>[<span class="number">4</span>]=&#123;<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>&#125;; <span class="comment">//not a string</span></span><br><span class="line"><span class="comment">//用字符串常量初始化字符串</span></span><br><span class="line"><span class="keyword">char</span> <span class="keyword">str</span>[]=<span class="string">"abcd"</span> <span class="comment">//字符串常量(用""引起)隐式地在结尾添加'\0'</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+</li>
+</ul>
+<pre><code>+ c++字符串string
+    <figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[]=<span class="string">"abc"</span>;</span><br><span class="line">string <span class="keyword">str</span>;</span><br><span class="line"><span class="comment">//可以用c风格字符串初始化string</span></span><br><span class="line"><span class="keyword">str</span>=a;</span><br><span class="line"><span class="comment">//可以用cin初始化string</span></span><br><span class="line">cin &gt;&gt; <span class="keyword">str</span>;</span><br><span class="line"><span class="comment">//可以用数组索引法索引字符串</span></span><br><span class="line">cout &lt;&lt; <span class="keyword">str</span>[<span class="number">2</span>];</span><br></pre></td></tr></table></figure>
 
+
++ char数组和string的一些函数
+    <figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//<span class="type">char</span>[]用sizeof()计算数组的长度，用strlen()计算字符串的长度。</span><br><span class="line">//<span class="type">string</span>用<span class="type">string</span>.size()计算字符串的长度。</span><br></pre></td></tr></table></figure>
+</code></pre>
       
     </div>
 
