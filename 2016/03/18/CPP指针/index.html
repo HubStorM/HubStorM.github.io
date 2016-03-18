@@ -58,21 +58,18 @@
 
 
 <meta name="description" content="综述
-&amp;amp;运算符 p=&amp;amp;var:取变量var(可以为数组)的地址。 指向var的指针，当var是普通变量(int)，p指向普通变量(int),当var是一个数组(&amp;amp;var[10]),p指向一个数组。
- 123456789101112131415161718/*a在作为右值时会被当做指向数组第一个元素的指针&amp;amp;a是指向数组a[3]的一个指针，只能赋值给数组指针，例如 in">
+&amp;amp;运算符">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CPP指针">
 <meta property="og:url" content="http://yoursite.com/2016/03/18/CPP指针/index.html">
 <meta property="og:site_name" content="Iris">
 <meta property="og:description" content="综述
-&amp;amp;运算符 p=&amp;amp;var:取变量var(可以为数组)的地址。 指向var的指针，当var是普通变量(int)，p指向普通变量(int),当var是一个数组(&amp;amp;var[10]),p指向一个数组。
- 123456789101112131415161718/*a在作为右值时会被当做指向数组第一个元素的指针&amp;amp;a是指向数组a[3]的一个指针，只能赋值给数组指针，例如 in">
-<meta property="og:updated_time" content="2016-03-18T13:52:05.852Z">
+&amp;amp;运算符">
+<meta property="og:updated_time" content="2016-03-18T13:54:14.161Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CPP指针">
 <meta name="twitter:description" content="综述
-&amp;amp;运算符 p=&amp;amp;var:取变量var(可以为数组)的地址。 指向var的指针，当var是普通变量(int)，p指向普通变量(int),当var是一个数组(&amp;amp;var[10]),p指向一个数组。
- 123456789101112131415161718/*a在作为右值时会被当做指向数组第一个元素的指针&amp;amp;a是指向数组a[3]的一个指针，只能赋值给数组指针，例如 in">
+&amp;amp;运算符">
 
 
 
@@ -289,7 +286,8 @@
       
         <ol>
 <li><h1 id="u7EFC_u8FF0"><a href="#u7EFC_u8FF0" class="headerlink" title="综述"></a>综述</h1><ol>
-<li><h2 id="26amp_3B_u8FD0_u7B97_u7B26"><a href="#26amp_3B_u8FD0_u7B97_u7B26" class="headerlink" title="&amp;运算符"></a>&amp;运算符</h2><p> p=&amp;var:取变量var(可以为数组)的地址。<br> 指向var的指针，当var是普通变量(int)，p指向普通变量(int),当var是一个数组(&amp;var[10]),p指向一个数组。</p>
+<li><h2 id="26amp_3B_u8FD0_u7B97_u7B26"><a href="#26amp_3B_u8FD0_u7B97_u7B26" class="headerlink" title="&amp;运算符"></a>&amp;运算符</h2><a id="more"></a>
+<p> p=&amp;var:取变量var(可以为数组)的地址。<br> 指向var的指针，当var是普通变量(int)，p指向普通变量(int),当var是一个数组(&amp;var[10]),p指向一个数组。</p>
  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">a在作为右值时会被当做指向数组第一个元素的指针</span><br><span class="line">&amp;a是指向数组a[3]的一个指针，只能赋值给数组指针，例如 int(*ptr)[3]，虽然对</span><br><span class="line">于一维数组来说没有什么意义。因为如果要用ptr来操作一维数组，必须用a=(*ptr)先定位</span><br><span class="line">到这个一维数组，然后用*(a+1)来访问a[1]。</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">3</span>] = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span> &#125;;	<span class="comment">//a:int[3]</span></span><br><span class="line"><span class="keyword">int</span>* p = a;				<span class="comment">//p:int*</span></span><br><span class="line"><span class="keyword">int</span>(*ptr)[<span class="number">3</span>] = &amp;a;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line">dim2a在作为右值时会被当做指向一个数组的指针(行指针)</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">int</span> dim2a[<span class="number">2</span>][<span class="number">4</span>] = &#123;</span><br><span class="line">	&#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span> &#125;,</span><br><span class="line">	&#123; <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span> &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">int</span>(*dim2p)[<span class="number">4</span>] = dim2a;</span><br></pre></td></tr></table></figure>
 </li>
 <li><h2 id="u6570_u7EC4_u540D_u548C_u6307_u9488"><a href="#u6570_u7EC4_u540D_u548C_u6307_u9488" class="headerlink" title="数组名和指针"></a>数组名和指针</h2><p> 数组名在作为右值赋给指针时，会把它们最外层的数组所指的数据类型赋给指针，例如对于int[]而言，会把int型变量赋给指针，对于int[][]而言，会把int[]型变量赋给指针，从而成为数组指针。</p>
