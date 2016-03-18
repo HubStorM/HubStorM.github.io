@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="日记," />
+  <meta name="keywords" content="cpp," />
 
 
 
@@ -57,19 +57,22 @@
 
 
 
-<meta name="description" content="照理说，程序猿做出的第一个产品都会以Hello World命名，不管是调成功了一段代码，还是学会了一种语言，或者是学会了别人开发的应用，Hello World似乎成为了“开头”的代名词。然而，我更多的是想在这一片网络中留下更多自己的想法，我深知自己和技术大牛之间的差距，我也从来没有写过任何技术文档(至少在这之前)，但是，毕竟每个人都有自己的思维，与他人与众不同的地方。
-我的看法是，程序猿并不只是代">
+<meta name="description" content="综述
+&amp;amp;运算符 p=&amp;amp;var:取变量var(可以为数组)的地址。 指向var的指针，当var是普通变量(int)，p指向普通变量(int),当var是一个数组(&amp;amp;var[10]),p指向一个数组。
+ 123456789101112131415161718/*a在作为右值时会被当做指向数组第一个元素的指针&amp;amp;a是指向数组a[3]的一个指针，只能赋值给数组指针，例如 in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一次记录">
-<meta property="og:url" content="http://yoursite.com/2016/01/22/第一次记录/index.html">
+<meta property="og:title" content="CPP指针">
+<meta property="og:url" content="http://yoursite.com/2016/03/18/CPP指针/index.html">
 <meta property="og:site_name" content="Iris">
-<meta property="og:description" content="照理说，程序猿做出的第一个产品都会以Hello World命名，不管是调成功了一段代码，还是学会了一种语言，或者是学会了别人开发的应用，Hello World似乎成为了“开头”的代名词。然而，我更多的是想在这一片网络中留下更多自己的想法，我深知自己和技术大牛之间的差距，我也从来没有写过任何技术文档(至少在这之前)，但是，毕竟每个人都有自己的思维，与他人与众不同的地方。
-我的看法是，程序猿并不只是代">
-<meta property="og:updated_time" content="2016-03-02T11:45:41.915Z">
+<meta property="og:description" content="综述
+&amp;amp;运算符 p=&amp;amp;var:取变量var(可以为数组)的地址。 指向var的指针，当var是普通变量(int)，p指向普通变量(int),当var是一个数组(&amp;amp;var[10]),p指向一个数组。
+ 123456789101112131415161718/*a在作为右值时会被当做指向数组第一个元素的指针&amp;amp;a是指向数组a[3]的一个指针，只能赋值给数组指针，例如 in">
+<meta property="og:updated_time" content="2016-03-18T13:52:05.852Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一次记录">
-<meta name="twitter:description" content="照理说，程序猿做出的第一个产品都会以Hello World命名，不管是调成功了一段代码，还是学会了一种语言，或者是学会了别人开发的应用，Hello World似乎成为了“开头”的代名词。然而，我更多的是想在这一片网络中留下更多自己的想法，我深知自己和技术大牛之间的差距，我也从来没有写过任何技术文档(至少在这之前)，但是，毕竟每个人都有自己的思维，与他人与众不同的地方。
-我的看法是，程序猿并不只是代">
+<meta name="twitter:title" content="CPP指针">
+<meta name="twitter:description" content="综述
+&amp;amp;运算符 p=&amp;amp;var:取变量var(可以为数组)的地址。 指向var的指针，当var是普通变量(int)，p指向普通变量(int),当var是一个数组(&amp;amp;var[10]),p指向一个数组。
+ 123456789101112131415161718/*a在作为右值时会被当做指向数组第一个元素的指针&amp;amp;a是指向数组a[3]的一个指针，只能赋值给数组指针，例如 in">
 
 
 
@@ -87,7 +90,7 @@
   };
 </script>
 
-  <title> 第一次记录 | Iris </title>
+  <title> CPP指针 | Iris </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -227,7 +230,7 @@
             
             
               
-                第一次记录
+                CPP指针
               
             
           </h1>
@@ -239,8 +242,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-22T23:28:39+08:00" content="2016-01-22">
-              2016-01-22
+            <time itemprop="dateCreated" datetime="2016-03-18T16:14:34+08:00" content="2016-03-18">
+              2016-03-18
             </time>
           </span>
 
@@ -253,8 +256,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/日记/" itemprop="url" rel="index">
-                    <span itemprop="name">日记</span>
+                  <a href="/categories/编程语言/" itemprop="url" rel="index">
+                    <span itemprop="name">编程语言</span>
                   </a>
                 </span>
 
@@ -284,14 +287,23 @@
       
 
       
-        <a id="more"></a>
-<p>照理说，程序猿做出的第一个产品都会以Hello World命名，不管是调成功了一段代码，还是学会了一种语言，或者是学会了别人开发的应用，Hello World似乎成为了“开头”的代名词。然而，我更多的是想在这一片网络中留下更多自己的想法，我深知自己和技术大牛之间的差距，我也从来没有写过任何技术文档(至少在这之前)，但是，毕竟每个人都有自己的思维，与他人与众不同的地方。</p>
-<p>我的看法是，程序猿并不只是代码的代名词，计算机深受人文科学的影响，包括编程语言的设计,模式的设计等等，或多或少都体现着人文理念。就拿面向对象编程的思想来说，这就和柏拉图的“理型”思维不谋而合，柏拉图认为世间万物都有着一个完美的“型”，而单个的物体只是这种“型”的不完美对象，这或多或少和“类与对象”的观念有些类似。</p>
-<p>我一直相信，想要在单一的学科取得巨大的创新与突破是需要毅力与灵感的，与之相反的，如果能够尝试把两种或更多不是特别相关的学科结合，那么在创新与发现上将会容易得多。这篇文章如果能够作为自己研究哲学与具体科学结合的开端，那一定是再好不过了。</p>
-<p>文章的结尾，我想引用一下笛卡尔的名言，作为启迪也好，勉励也罢，希望能多让自己思考。</p>
-<blockquote>
-<p>cogito ergosum</p>
-</blockquote>
+        <ol>
+<li><h1 id="u7EFC_u8FF0"><a href="#u7EFC_u8FF0" class="headerlink" title="综述"></a>综述</h1><ol>
+<li><h2 id="26amp_3B_u8FD0_u7B97_u7B26"><a href="#26amp_3B_u8FD0_u7B97_u7B26" class="headerlink" title="&amp;运算符"></a>&amp;运算符</h2><p> p=&amp;var:取变量var(可以为数组)的地址。<br> 指向var的指针，当var是普通变量(int)，p指向普通变量(int),当var是一个数组(&amp;var[10]),p指向一个数组。</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">a在作为右值时会被当做指向数组第一个元素的指针</span><br><span class="line">&amp;a是指向数组a[3]的一个指针，只能赋值给数组指针，例如 int(*ptr)[3]，虽然对</span><br><span class="line">于一维数组来说没有什么意义。因为如果要用ptr来操作一维数组，必须用a=(*ptr)先定位</span><br><span class="line">到这个一维数组，然后用*(a+1)来访问a[1]。</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">3</span>] = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span> &#125;;	<span class="comment">//a:int[3]</span></span><br><span class="line"><span class="keyword">int</span>* p = a;				<span class="comment">//p:int*</span></span><br><span class="line"><span class="keyword">int</span>(*ptr)[<span class="number">3</span>] = &amp;a;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line">dim2a在作为右值时会被当做指向一个数组的指针(行指针)</span><br><span class="line">*/</span></span><br><span class="line"><span class="keyword">int</span> dim2a[<span class="number">2</span>][<span class="number">4</span>] = &#123;</span><br><span class="line">	&#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span> &#125;,</span><br><span class="line">	&#123; <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span> &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">int</span>(*dim2p)[<span class="number">4</span>] = dim2a;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h2 id="u6570_u7EC4_u540D_u548C_u6307_u9488"><a href="#u6570_u7EC4_u540D_u548C_u6307_u9488" class="headerlink" title="数组名和指针"></a>数组名和指针</h2><p> 数组名在作为右值赋给指针时，会把它们最外层的数组所指的数据类型赋给指针，例如对于int[]而言，会把int型变量赋给指针，对于int[][]而言，会把int[]型变量赋给指针，从而成为数组指针。</p>
+ <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//将数组名赋值给指针，会使数组退化成指针。</span><br><span class="line">//重载一次[]操作符，相当于解除一次(外层)引用(*)。</span><br><span class="line"></span><br><span class="line">//一维数组</span><br><span class="line">int a[3] = &#123; 1,2,3 &#125;;//a:int[3]</span><br><span class="line">int<span class="bullet">* p = a;//p:int*</span></span><br><span class="line">//重载[]：p[2]=*(p+2)=a[2]=3;</span><br><span class="line"></span><br><span class="line">//二维数组</span><br><span class="line">int dim2a[<span class="link_label">2</span>][<span class="link_reference">4</span>] = &#123;</span><br><span class="line"><span class="code">	&#123; 1, 2, 3, 4 &#125;,</span></span><br><span class="line"><span class="code">	&#123; 5, 6, 7, 8 &#125;</span></span><br><span class="line">&#125;;</span><br><span class="line">int(*dim2p)[4] = dim2a;</span><br><span class="line">//重载[<span class="link_label"></span>]：dim2p[<span class="link_label">1</span>][<span class="link_reference">1</span>]=<span class="emphasis">*(*</span>(dim2p+1)+1)=6;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><h1 id="u52A8_u6001_u5206_u914D"><a href="#u52A8_u6001_u5206_u914D" class="headerlink" title="动态分配"></a>动态分配</h1><ol>
+<li><h5 id="new_u6307_u9488_u6570_u7EC4_uFF0C_u7528_u6307_u9488_u6570_u7EC4_u63A5_u6536new_u7684_u4E00_u7EF4_u6570_u7EC4"><a href="#new_u6307_u9488_u6570_u7EC4_uFF0C_u7528_u6307_u9488_u6570_u7EC4_u63A5_u6536new_u7684_u4E00_u7EF4_u6570_u7EC4" class="headerlink" title="new指针数组，用指针数组接收new的一维数组"></a>new指针数组，用指针数组接收new的一维数组</h5> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">int*[n]：指针数组，数组中的每一个元素都是int*类型，指向一个int[]。维度可以运行期确定。</span><br><span class="line">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span>** newp=<span class="keyword">new</span> <span class="keyword">int</span>*[<span class="number">2</span>];		<span class="comment">//行</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)	<span class="comment">//列</span></span><br><span class="line">	newp[i] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">4</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)	<span class="comment">//赋值</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">4</span>; j++)</span><br><span class="line">		newp[i][j] = i * <span class="number">2</span> + j;</span><br><span class="line"></span><br><span class="line"><span class="comment">//delete</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">	<span class="keyword">delete</span>[] newp[i];</span><br><span class="line"><span class="keyword">delete</span>[] newp;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="new_u6307_u9488_u6570_u7EC4_uFF0C_u7528new_u51FA_u7684_u7B2C_u4E00_u4E2A_u5143_u7D20_28int*__u7C7B_u578B_29_u63A5_u6536new_u51FA_u7684_u6240_u6709_u5143_u7D20_28_u8FDE_u7EED_29_uFF0C_u7136_u540E_u6309_u7167_u6BCF_u4E00_u884C_u7684_u4E2A_u6570_u5C06new_u51FA_u7684_u540E_u51E0_u4E2A_u5143_u7D20_u91CD_u65B0_u5206_u914D_u6307_u9488_u6570_u7EC4"><a href="#new_u6307_u9488_u6570_u7EC4_uFF0C_u7528new_u51FA_u7684_u7B2C_u4E00_u4E2A_u5143_u7D20_28int*__u7C7B_u578B_29_u63A5_u6536new_u51FA_u7684_u6240_u6709_u5143_u7D20_28_u8FDE_u7EED_29_uFF0C_u7136_u540E_u6309_u7167_u6BCF_u4E00_u884C_u7684_u4E2A_u6570_u5C06new_u51FA_u7684_u540E_u51E0_u4E2A_u5143_u7D20_u91CD_u65B0_u5206_u914D_u6307_u9488_u6570_u7EC4" class="headerlink" title="new指针数组，用new出的第一个元素(int* 类型)接收new出的所有元素(连续)，然后按照每一行的个数将new出的后几个元素重新分配指针数组"></a>new指针数组，用new出的第一个元素(int* 类型)接收new出的所有元素(连续)，然后按照每一行的个数将new出的后几个元素重新分配指针数组</h5> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>** newp = <span class="keyword">new</span> <span class="keyword">int</span>*[<span class="number">2</span>];	<span class="comment">//指针数组，行</span></span><br><span class="line">newp[<span class="number">0</span>] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span> * <span class="number">4</span>];	<span class="comment">//为所有元素new空间</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">2</span>; i++)	<span class="comment">//重新分配new出的空间给每一行的数组</span></span><br><span class="line">	newp[i] = newp[i - <span class="number">1</span>] + <span class="number">4</span>;</span><br><span class="line">	</span><br><span class="line"><span class="comment">//delete</span></span><br><span class="line"><span class="keyword">delete</span>[] newp;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
 
       
     </div>
@@ -300,7 +312,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/日记/" rel="tag">#日记</a>
+            <a href="/tags/cpp/" rel="tag">#cpp</a>
           
         </div>
       
@@ -309,13 +321,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/08/CPP基础/" rel="next" title="CPP基础">
+                <i class="fa fa-chevron-left"></i> CPP基础
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/27/java数据结构/" rel="prev" title="java数据结构">
-                java数据结构 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -429,7 +441,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u7EFC_u8FF0"><span class="nav-number">1.</span> <span class="nav-text">综述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#26amp_3B_u8FD0_u7B97_u7B26"><span class="nav-number">1.1.</span> <span class="nav-text">&运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6570_u7EC4_u540D_u548C_u6307_u9488"><span class="nav-number">1.2.</span> <span class="nav-text">数组名和指针</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u52A8_u6001_u5206_u914D"><span class="nav-number">2.</span> <span class="nav-text">动态分配</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#new_u6307_u9488_u6570_u7EC4_uFF0C_u7528_u6307_u9488_u6570_u7EC4_u63A5_u6536new_u7684_u4E00_u7EF4_u6570_u7EC4"><span class="nav-number">2.0.0.0.1.</span> <span class="nav-text">new指针数组，用指针数组接收new的一维数组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#new_u6307_u9488_u6570_u7EC4_uFF0C_u7528new_u51FA_u7684_u7B2C_u4E00_u4E2A_u5143_u7D20_28int*__u7C7B_u578B_29_u63A5_u6536new_u51FA_u7684_u6240_u6709_u5143_u7D20_28_u8FDE_u7EED_29_uFF0C_u7136_u540E_u6309_u7167_u6BCF_u4E00_u884C_u7684_u4E2A_u6570_u5C06new_u51FA_u7684_u540E_u51E0_u4E2A_u5143_u7D20_u91CD_u65B0_u5206_u914D_u6307_u9488_u6570_u7EC4"><span class="nav-number">2.0.0.0.2.</span> <span class="nav-text">new指针数组，用new出的第一个元素(int* 类型)接收new出的所有元素(连续)，然后按照每一行的个数将new出的后几个元素重新分配指针数组</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
