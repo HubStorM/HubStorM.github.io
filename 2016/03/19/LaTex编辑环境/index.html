@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="machine learning," />
+  <meta name="keywords" content="LaTex," />
 
 
 
@@ -57,27 +57,22 @@
 
 
 
-<meta name="description" content="ch2:基本图概念 path：A-＞B 祖先（ancestors）：A ，有向图 子孙（descendants）：B，有向图
- Markov blanket:一个节点的parents，children，children’s parents，不包括自己。MB包含了这个节点的所有信息，所有不属于MB(xi)的节点都与xi在MB(xi)条件下独立。  cycle：有向的路径，起点和终点相同。 loop：">
+<meta name="description" content="安装Tex引擎TexLive。
+安装Sublime插件LaTexTools 配置LatexTools： LaTeXTools.sublime-settings：
+ 1231.[&quot;texpath&quot; : &quot;&quot;] 为 [&quot;texpath&quot; : &quot;text路径\\bin\\win32;$PATH&quot;]；2.[&quot;distro&quot; : &quot;miktex&quot;] 更改为 [&quot;distro&quot; : &quot;texlive&quot;]3.在">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Bayesian Reasoning and Machine Learning">
-<meta property="og:url" content="http://yoursite.com/2016/02/28/Bayesian-Reasoning-and-Machine-Learning/index.html">
+<meta property="og:title" content="LaTex编辑环境">
+<meta property="og:url" content="http://yoursite.com/2016/03/19/LaTex编辑环境/index.html">
 <meta property="og:site_name" content="Iris">
-<meta property="og:description" content="ch2:基本图概念 path：A-＞B 祖先（ancestors）：A ，有向图 子孙（descendants）：B，有向图
- Markov blanket:一个节点的parents，children，children’s parents，不包括自己。MB包含了这个节点的所有信息，所有不属于MB(xi)的节点都与xi在MB(xi)条件下独立。  cycle：有向的路径，起点和终点相同。 loop：">
-<meta property="og:image" content="http://i.imgur.com/h8wrtHS.png">
-<meta property="og:image" content="http://i.imgur.com/A7CQmIL.png">
-<meta property="og:image" content="http://i.imgur.com/SEljhWY.png">
-<meta property="og:image" content="http://i.imgur.com/0nCwSZ8.png">
-<meta property="og:image" content="http://i.imgur.com/d4f6Mio.png">
-<meta property="og:image" content="http://i.imgur.com/4JiEBb3.png">
-<meta property="og:image" content="http://i.imgur.com/GPrdM0h.png">
-<meta property="og:image" content="http://i.imgur.com/ZlpXVxW.png">
-<meta property="og:updated_time" content="2016-03-03T12:38:52.290Z">
+<meta property="og:description" content="安装Tex引擎TexLive。
+安装Sublime插件LaTexTools 配置LatexTools： LaTeXTools.sublime-settings：
+ 1231.[&quot;texpath&quot; : &quot;&quot;] 为 [&quot;texpath&quot; : &quot;text路径\\bin\\win32;$PATH&quot;]；2.[&quot;distro&quot; : &quot;miktex&quot;] 更改为 [&quot;distro&quot; : &quot;texlive&quot;]3.在">
+<meta property="og:updated_time" content="2016-03-19T05:56:58.585Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bayesian Reasoning and Machine Learning">
-<meta name="twitter:description" content="ch2:基本图概念 path：A-＞B 祖先（ancestors）：A ，有向图 子孙（descendants）：B，有向图
- Markov blanket:一个节点的parents，children，children’s parents，不包括自己。MB包含了这个节点的所有信息，所有不属于MB(xi)的节点都与xi在MB(xi)条件下独立。  cycle：有向的路径，起点和终点相同。 loop：">
+<meta name="twitter:title" content="LaTex编辑环境">
+<meta name="twitter:description" content="安装Tex引擎TexLive。
+安装Sublime插件LaTexTools 配置LatexTools： LaTeXTools.sublime-settings：
+ 1231.[&quot;texpath&quot; : &quot;&quot;] 为 [&quot;texpath&quot; : &quot;text路径\\bin\\win32;$PATH&quot;]；2.[&quot;distro&quot; : &quot;miktex&quot;] 更改为 [&quot;distro&quot; : &quot;texlive&quot;]3.在">
 
 
 
@@ -95,7 +90,7 @@
   };
 </script>
 
-  <title> Bayesian Reasoning and Machine Learning | Iris </title>
+  <title> LaTex编辑环境 | Iris </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -235,7 +230,7 @@
             
             
               
-                Bayesian Reasoning and Machine Learning
+                LaTex编辑环境
               
             
           </h1>
@@ -247,8 +242,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-28T22:33:53+08:00" content="2016-02-28">
-              2016-02-28
+            <time itemprop="dateCreated" datetime="2016-03-19T13:41:18+08:00" content="2016-03-19">
+              2016-03-19
             </time>
           </span>
 
@@ -261,8 +256,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/reading-notes/" itemprop="url" rel="index">
-                    <span itemprop="name">reading notes</span>
+                  <a href="/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">tools</span>
                   </a>
                 </span>
 
@@ -293,20 +288,13 @@
 
       
         <ol>
-<li><h1 id="ch2_3A_u57FA_u672C_u56FE_u6982_u5FF5"><a href="#ch2_3A_u57FA_u672C_u56FE_u6982_u5FF5" class="headerlink" title="ch2:基本图概念"></a>ch2:基本图概念</h1><p> path：A-＞B<br> 祖先（ancestors）：A ，有向图<br> 子孙（descendants）：B，有向图</p>
-<p> Markov blanket:一个节点的parents，children，children’s parents，不包括自己。MB包含了这个节点的所有信息，所有不属于MB(xi)的节点都与xi在MB(xi)条件下独立。<br> <img src="http://i.imgur.com/h8wrtHS.png" alt=""><br> cycle：有向的路径，起点和终点相同。<br> loop：无向路径，起点和终点相同。<br> chord：在loop中连接不相邻顶点的边。</p>
-<p> 无向图中的概念：<br> clique：所有顶点都相连的集合</p>
-<a id="more"></a>
+<li>安装Tex引擎TexLive。</li>
+<li><p>安装Sublime插件LaTexTools<br> 配置LatexTools：<br> LaTeXTools.sublime-settings：</p>
+ <figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>[<span class="string">"texpath"</span> : <span class="string">""</span>] 为 [<span class="string">"texpath"</span> : <span class="string">"text路径\\bin\\win32;$PATH"</span>]；</span><br><span class="line"><span class="number">2.</span>[<span class="string">"distro"</span> : <span class="string">"miktex"</span>] 更改为 [<span class="string">"distro"</span> : <span class="string">"texlive"</span>]</span><br><span class="line"><span class="number">3.</span>在<span class="name">Build</span> <span class="atom">engine</span> <span class="atom">settings</span>部分下面，将[<span class="string">"builder"</span>: <span class="string">"traditional"</span>]更改为[<span class="string">"builder"</span>: <span class="string">"simple"</span>]</span><br></pre></td></tr></table></figure>
 </li>
-<li><h1 id="ch3_3ABelief_Networks"><a href="#ch3_3ABelief_Networks" class="headerlink" title="ch3:Belief Networks"></a>ch3:Belief Networks</h1><p> 分布&lt;====&gt;有向无环图(DAG)</p>
-<ul>
-<li>由贝叶斯公式：<br><img src="http://i.imgur.com/A7CQmIL.png" alt=""><br>如果把所有变量级联，那么由贝叶斯得到的DAG是全级联的，没有独立声明，并且是一个DAG。<br><img src="http://i.imgur.com/SEljhWY.png" alt=""></li>
-<li>BN(贝叶斯网络、信念网络、信度网络)<br><img src="http://i.imgur.com/0nCwSZ8.png" alt=""><br>BN的产生方法：删除上图中的任何一条边，都代表一条独立的声明，都能够形成一个BN(当然也可以不删任何一条边.)<br>在BN图结构确立以后，都需要确定对应的CPT(条件概率表)，与p(xi|pa(xi))对应。</li>
-<li>三节点的BN的独立性：<br>collider:<br><img src="http://i.imgur.com/d4f6Mio.png" alt=""><br>non-collider:<br>其中一种non-collider<br><img src="http://i.imgur.com/4JiEBb3.png" alt=""><br><img src="http://i.imgur.com/GPrdM0h.png" alt=""><br>其余三种non-collider和第一种一样<br><img src="http://i.imgur.com/ZlpXVxW.png" alt=""></li>
-<li>多节点的BN的独立性<br>d-connection：<br>Z是条件集，如果X,Y之间存在一条无向路径U，U中的所有collider都在Z中，U中的所有non-collider都不在Z中，那么X，Y关于Z，是d-connection的。反之，是d-separation =&gt; X⊥Y|Z<br>注意点：d-connection不能反映所有的图上的独立信息，在某些情况下，图上的独立信息可能是数值上的，不能由d-connection推出。</li>
-<li>马尔科夫等价性<br>定义：如果两个DAG有相同的条件独立集合，那么这两个DAG马尔科夫等价。<br>判断：具有相同的框架(去掉箭头)和相同的immorality set(A,B有一个child C，并且A,B不相连，那么ABC属于immorality set)，就具有马尔科夫等价性。</li>
-</ul>
+<li><p>安装SumatraPDF<br> 设置反向搜索<br> “C:\APP\sublime2\Sublime Text 2\sublime_text.exe” “%f:%l”</p>
 </li>
+<li>ctrl+b编译Tex文本并预览。</li>
 </ol>
 
       
@@ -316,7 +304,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/machine-learning/" rel="tag">#machine learning</a>
+            <a href="/tags/LaTex/" rel="tag">#LaTex</a>
           
         </div>
       
@@ -325,17 +313,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/27/scikit-learn/" rel="next" title="scikit-learn">
-                <i class="fa fa-chevron-left"></i> scikit-learn
+              <a href="/2016/03/18/CPP细节/" rel="next" title="CPP细节">
+                <i class="fa fa-chevron-left"></i> CPP细节
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/08/CPP基础/" rel="prev" title="CPP基础">
-                CPP基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -449,7 +433,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ch2_3A_u57FA_u672C_u56FE_u6982_u5FF5"><span class="nav-number">1.</span> <span class="nav-text">ch2:基本图概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ch3_3ABelief_Networks"><span class="nav-number">2.</span> <span class="nav-text">ch3:Belief Networks</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
