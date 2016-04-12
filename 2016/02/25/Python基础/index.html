@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="Iris">
 <meta property="og:description" content="数据类型
 4种基本数据类型">
-<meta property="og:updated_time" content="2016-03-02T11:45:20.048Z">
+<meta property="og:updated_time" content="2016-04-12T08:05:38.530Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python基础">
 <meta name="twitter:description" content="数据类型
@@ -318,12 +318,8 @@
 <li><h3 id="u51FD_u6570"><a href="#u51FD_u6570" class="headerlink" title="函数"></a>函数</h3> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span><span class="params">(n)</span>:</span></span><br><span class="line">    a=<span class="number">0</span></span><br><span class="line">    b=<span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> b&lt;n:</span><br><span class="line">        <span class="keyword">print</span> (b,)</span><br><span class="line">        a,b=b,a+b</span><br><span class="line">fib(<span class="number">200</span>)</span><br></pre></td></tr></table></figure>
 <p> 位置参数，默认参数，关键字参数</p>
  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 位置参数必须出现在默认参数之前，可以用关键字参数(调用时指定参数名称)更改</span></span><br><span class="line"><span class="comment"># 调用函数时位置参数的位置。</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(posargs,defarg1=dval1,defarg2=dval2,...)</span>:</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>可变长度的参数:</p>
- <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#9;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p> def function(posargs,defargs,<em>listargs,*</em>dictargs):</p>
-<h1 id="call"><a href="#call" class="headerlink" title="call"></a>call</h1><p> function(pos,def,list,dict)<br> ```</p>
+<p> 可变长度的参数:</p>
+ <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*listargs，**dictargs</span><br><span class="line">def <span class="function"><span class="keyword">function</span><span class="params">(posargs,defargs,*listargs,**dictargs)</span><span class="type">:</span><br><span class="line"># call</span></span><br><span class="line"><span class="title">function</span><span class="params">(pos,def,list,dict)</span></span></span><br></pre></td></tr></table></figure>
 </li>
 <li><h3 id="u6A21_u5757_u7ED3_u6784_u548C_u5E03_u5C40"><a href="#u6A21_u5757_u7ED3_u6784_u548C_u5E03_u5C40" class="headerlink" title="模块结构和布局"></a>模块结构和布局</h3><p> 所有模块都有能力执行代码，通过<code>__name__</code>属性来区分模块是被导入还是直接执行：</p>
 <ul>
@@ -434,7 +430,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -448,7 +444,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -480,7 +476,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u7C7B_u578B"><span class="nav-number">1.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4_u79CD_u57FA_u672C_u6570_u636E_u7C7B_u578B"><span class="nav-number">1.1.</span> <span class="nav-text">4种基本数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u8F6C_u6362_u51FD_u6570"><span class="nav-number">1.2.</span> <span class="nav-text">转换函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B57_u7B26_u4E32"><span class="nav-number">2.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u5F15_u53F7"><span class="nav-number">2.1.</span> <span class="nav-text">引号</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5217_u8868"><span class="nav-number">3.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5143_u7EC4"><span class="nav-number">4.</span> <span class="nav-text">元组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B57_u5178"><span class="nav-number">5.</span> <span class="nav-text">字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7A0B_u5E8F_u7ED3_u6784_u63A7_u5236"><span class="nav-number">6.</span> <span class="nav-text">程序结构控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#if_u2026else"><span class="nav-number">6.1.</span> <span class="nav-text">if…else</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#while"><span class="nav-number">6.2.</span> <span class="nav-text">while</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for"><span class="nav-number">6.3.</span> <span class="nav-text">for</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u51FD_u6570"><span class="nav-number">7.</span> <span class="nav-text">函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#call"><span class="nav-number"></span> <span class="nav-text">call</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u6A21_u5757_u7ED3_u6784_u548C_u5E03_u5C40"><span class="nav-number">1.</span> <span class="nav-text">模块结构和布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7C7B"><span class="nav-number">2.</span> <span class="nav-text">类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u6570_u636E_u7C7B_u578B"><span class="nav-number">1.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4_u79CD_u57FA_u672C_u6570_u636E_u7C7B_u578B"><span class="nav-number">1.1.</span> <span class="nav-text">4种基本数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u8F6C_u6362_u51FD_u6570"><span class="nav-number">1.2.</span> <span class="nav-text">转换函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B57_u7B26_u4E32"><span class="nav-number">2.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u5F15_u53F7"><span class="nav-number">2.1.</span> <span class="nav-text">引号</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5217_u8868"><span class="nav-number">3.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5143_u7EC4"><span class="nav-number">4.</span> <span class="nav-text">元组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B57_u5178"><span class="nav-number">5.</span> <span class="nav-text">字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7A0B_u5E8F_u7ED3_u6784_u63A7_u5236"><span class="nav-number">6.</span> <span class="nav-text">程序结构控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#if_u2026else"><span class="nav-number">6.1.</span> <span class="nav-text">if…else</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#while"><span class="nav-number">6.2.</span> <span class="nav-text">while</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for"><span class="nav-number">6.3.</span> <span class="nav-text">for</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u51FD_u6570"><span class="nav-number">7.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6A21_u5757_u7ED3_u6784_u548C_u5E03_u5C40"><span class="nav-number">8.</span> <span class="nav-text">模块结构和布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7C7B"><span class="nav-number">9.</span> <span class="nav-text">类</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
