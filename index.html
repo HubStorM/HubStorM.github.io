@@ -241,6 +241,238 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/25/静态库与共享库/" itemprop="url">
+                  静态库与共享库
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-25T00:11:53+08:00" content="2016-07-25">
+              2016-07-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><h1 id="u9759_u6001_u5E93"><a href="#u9759_u6001_u5E93" class="headerlink" title="静态库"></a>静态库</h1><ol>
+<li>静态库的创建</li>
+</ol>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/25/GNU科学计算工具gsl/" itemprop="url">
+                  GNU科学计算工具gsl
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-25T00:01:44+08:00" content="2016-07-25">
+              2016-07-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">tools</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><h1 id="u5B89_u88C5_u4E0E_u7F16_u8BD1"><a href="#u5B89_u88C5_u4E0E_u7F16_u8BD1" class="headerlink" title="安装与编译"></a>安装与编译</h1><ol>
+<li><p>安装</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo ./configure</span><br><span class="line">sudo <span class="built_in">make</span></span><br><span class="line">sudo <span class="built_in">make</span> install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -g -c -Wall besselFunction<span class="class">.c</span></span><br><span class="line">gcc -g -o besselFunction besselFunction<span class="class">.o</span> -lgsl -lgslcblas -lm</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<ol>
+<li><p>函数与变量类型</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//包含头文件</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;gsl/gsl_foo.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>函数<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gsl_foo_fn				<span class="keyword">double</span></span><br><span class="line">gsl_foo_long_double_fn	<span class="keyword">long</span> <span class="keyword">double</span></span><br><span class="line">gsl_foo_float_fn		<span class="keyword">float</span></span><br><span class="line">gsl_foo_long_fn			<span class="keyword">long</span></span><br><span class="line">gsl_foo_ulong_fn		<span class="keyword">unsigned</span> <span class="keyword">long</span></span><br><span class="line">gsl_foo_int_fn			<span class="keyword">int</span></span><br><span class="line">gsl_foo_uint_fn			<span class="keyword">unsigned</span> <span class="keyword">int</span></span><br><span class="line">gsl_foo_short_fn		<span class="keyword">short</span></span><br><span class="line">gsl_foo_ushort_fn		<span class="keyword">unsigned</span> <span class="keyword">short</span></span><br><span class="line">gsl_foo_char_fn			<span class="keyword">char</span></span><br><span class="line">gsl_foo_uchar_fn		<span class="keyword">unsigned</span> <span class="keyword">char</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<pre><code>1. 变量
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gsl_foo					<span class="keyword">double</span></span><br><span class="line">gsl_foo_long_double		<span class="keyword">long</span> <span class="keyword">double</span></span><br><span class="line">gsl_foo_float			<span class="keyword">float</span></span><br><span class="line">gsl_foo_long			<span class="keyword">long</span></span><br><span class="line">gsl_foo_ulong			<span class="keyword">unsigned</span> <span class="keyword">long</span></span><br><span class="line">gsl_foo_int				<span class="keyword">int</span></span><br><span class="line">gsl_foo_uint			<span class="keyword">unsigned</span> <span class="keyword">int</span></span><br><span class="line">gsl_foo_short			<span class="keyword">short</span></span><br><span class="line">gsl_foo_ushort			<span class="keyword">unsigned</span> <span class="keyword">short</span></span><br><span class="line">gsl_foo_char			<span class="keyword">char</span></span><br><span class="line">gsl_foo_uchar			<span class="keyword">unsigned</span> <span class="keyword">char</span></span><br></pre></td></tr></table></figure>
+</code></pre>
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/09/Vim/" itemprop="url">
                   Vim
                 </a>
@@ -1087,217 +1319,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/27/scikit-learn/" itemprop="url">
-                  scikit-learn
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-27T14:47:52+08:00" content="2016-02-27">
-              2016-02-27
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Machine-Learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Machine Learning</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <ol>
-<li><h1 id="u76D1_u7763_u5B66_u4E60"><a href="#u76D1_u7763_u5B66_u4E60" class="headerlink" title="监督学习"></a>监督学习</h1><ol>
-<li><h2 id="u5E7F_u4E49_u7EBF_u6027_u6A21_u578B"><a href="#u5E7F_u4E49_u7EBF_u6027_u6A21_u578B" class="headerlink" title="广义线性模型"></a>广义线性模型</h2><p> 线性模型概要<br> <img src="http://i.imgur.com/bKwwt68.png" alt=""></p>
-<ol>
-<li><p>普通最小二乘<br>普通最小二乘法依赖于特征项的相互独立假设，如果X有一个接近线性的性质，最小二乘会产生很大的方差。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/27/scikit-learn/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/27/pyplot/" itemprop="url">
-                  pyplot
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-27T10:21:07+08:00" content="2016-02-27">
-              2016-02-27
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/tools/" itemprop="url" rel="index">
-                    <span itemprop="name">tools</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <a id="more"></a>
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1344,7 +1365,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
