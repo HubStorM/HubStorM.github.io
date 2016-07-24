@@ -58,18 +58,39 @@
 
 
 <meta name="description" content="静态库
-静态库的创建">
+静态库的创建
+123ar rcs		create ar tv		show ar d		delete
+
+静态库搜索目录的环境变量及标准目录
+121. export LIBRARY_PATH=XXX:$LIBRARY_PATH  2. /lib  /usr/lib  /usr/local/lib
+
+静态库的使用：三种方式
+1231.链接的时候指定静态库的名称。2.将静态库放置在标准目录中，如/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="静态库与共享库">
 <meta property="og:url" content="http://yoursite.com/2016/07/25/静态库与共享库/index.html">
 <meta property="og:site_name" content="Iris">
 <meta property="og:description" content="静态库
-静态库的创建">
-<meta property="og:updated_time" content="2016-07-24T16:13:02.102Z">
+静态库的创建
+123ar rcs		create ar tv		show ar d		delete
+
+静态库搜索目录的环境变量及标准目录
+121. export LIBRARY_PATH=XXX:$LIBRARY_PATH  2. /lib  /usr/lib  /usr/local/lib
+
+静态库的使用：三种方式
+1231.链接的时候指定静态库的名称。2.将静态库放置在标准目录中，如/">
+<meta property="og:updated_time" content="2016-07-24T16:17:47.669Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="静态库与共享库">
 <meta name="twitter:description" content="静态库
-静态库的创建">
+静态库的创建
+123ar rcs		create ar tv		show ar d		delete
+
+静态库搜索目录的环境变量及标准目录
+121. export LIBRARY_PATH=XXX:$LIBRARY_PATH  2. /lib  /usr/lib  /usr/local/lib
+
+静态库的使用：三种方式
+1231.链接的时候指定静态库的名称。2.将静态库放置在标准目录中，如/">
 
 
 
@@ -286,7 +307,26 @@
       
         <ol>
 <li><h1 id="u9759_u6001_u5E93"><a href="#u9759_u6001_u5E93" class="headerlink" title="静态库"></a>静态库</h1><ol>
-<li>静态库的创建</li>
+<li><p>静态库的创建</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ar rcs		<span class="operator"><span class="keyword">create</span></span><br><span class="line"> ar tv		<span class="keyword">show</span></span><br><span class="line"> ar <span class="keyword">d</span>		<span class="keyword">delete</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>静态库搜索目录的环境变量及标准目录</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. export <span class="constant">LIBRARY_PATH</span>=<span class="constant">XXX</span>:<span class="variable">$LIBRARY_PATH</span></span><br><span class="line">  <span class="number">2</span>. /<span class="class"><span class="keyword">lib</span>  /<span class="title">usr</span>/<span class="title">lib</span>  /<span class="title">usr</span>/<span class="title">local</span>/<span class="title">lib</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>静态库的使用：三种方式</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.链接的时候指定静态库的名称。</span><br><span class="line"><span class="number">2</span>.将静态库放置在标准目录中，如/usr/<span class="class"><span class="keyword">lib</span>，然后使用-<span class="title">l</span>选项</span></span><br><span class="line"><span class="number">3</span>.-<span class="constant">L</span>指定静态库的路径，-l指定静态库的名称，不加空格</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><h1 id="u52A8_u6001_u5E93"><a href="#u52A8_u6001_u5E93" class="headerlink" title="动态库"></a>动态库</h1><ol>
+<li><p>动态库的创建</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">分步：</span><br><span class="line">	gcc -g -c -fPIC -Wall mod1<span class="class">.c</span> mod2<span class="class">.c</span></span><br><span class="line">	gcc -g -shared -o libmod<span class="class">.so</span> mod1<span class="class">.o</span> mod2<span class="class">.o</span></span><br><span class="line">合并：</span><br><span class="line">	gcc -g -fPIC -Wall mod1<span class="class">.c</span> mod2<span class="class">.c</span> -shared -o libmod.so</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>动态库的搜索路径及标准路径</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. export <span class="constant">LD_LIBRARY_PATH</span>=<span class="constant">XXX</span>:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line"><span class="number">2</span>. /<span class="class"><span class="keyword">lib</span>  /<span class="title">usr</span>/<span class="title">lib</span>  /<span class="title">usr</span>/<span class="title">local</span>/<span class="title">lib</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>动态库的使用</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">需要在运行时帮助链接器找到动态库所在位置,这是由于可执行文件在运行时才会链接动态库的内容,而静态库在链接的时候就已经将库包含进可执行文件中。                          </span><br><span class="line">gcc -g -c -Wall mod<span class="class">.c</span></span><br><span class="line">gcc -g -o outname mod<span class="class">.o</span> -lsoname</span><br></pre></td></tr></table></figure></li>
 </ol>
 </li>
 </ol>
@@ -308,6 +348,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/25/C/" rel="prev" title="C">
+                C <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -375,7 +419,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -389,7 +433,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -421,7 +465,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u9759_u6001_u5E93"><span class="nav-number">1.</span> <span class="nav-text">静态库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u9759_u6001_u5E93"><span class="nav-number">1.</span> <span class="nav-text">静态库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u52A8_u6001_u5E93"><span class="nav-number">2.</span> <span class="nav-text">动态库</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

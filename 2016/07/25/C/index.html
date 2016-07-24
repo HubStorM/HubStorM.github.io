@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="c," />
 
 
 
@@ -57,16 +57,16 @@
 
 
 
-<meta name="description" content="cogito ergosum      ----Descartes">
+<meta name="description" content="C声明与初始化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ArchLinux">
-<meta property="og:url" content="http://yoursite.com/2016/05/18/ArchLinux/index.html">
+<meta property="og:title" content="C">
+<meta property="og:url" content="http://yoursite.com/2016/07/25/C/index.html">
 <meta property="og:site_name" content="Iris">
-<meta property="og:description" content="cogito ergosum      ----Descartes">
-<meta property="og:updated_time" content="2016-05-18T14:44:22.116Z">
+<meta property="og:description" content="C声明与初始化">
+<meta property="og:updated_time" content="2016-07-24T16:40:38.405Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ArchLinux">
-<meta name="twitter:description" content="cogito ergosum      ----Descartes">
+<meta name="twitter:title" content="C">
+<meta name="twitter:description" content="C声明与初始化">
 
 
 
@@ -84,7 +84,7 @@
   };
 </script>
 
-  <title> ArchLinux | Iris </title>
+  <title> C | Iris </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -224,7 +224,7 @@
             
             
               
-                ArchLinux
+                C
               
             
           </h1>
@@ -236,8 +236,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-18T22:18:14+08:00" content="2016-05-18">
-              2016-05-18
+            <time itemprop="dateCreated" datetime="2016-07-25T00:34:28+08:00" content="2016-07-25">
+              2016-07-25
             </time>
           </span>
 
@@ -250,8 +250,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/编程语言/" itemprop="url" rel="index">
+                    <span itemprop="name">编程语言</span>
                   </a>
                 </span>
 
@@ -281,28 +281,49 @@
       
 
       
-        
+        <ol>
+<li><h1 id="C_u58F0_u660E_u4E0E_u521D_u59CB_u5316"><a href="#C_u58F0_u660E_u4E0E_u521D_u59CB_u5316" class="headerlink" title="C声明与初始化"></a>C声明与初始化</h1><a id="more"></a>
+<ol>
+<li><p>基本数据类型<br>基本数据类型几乎是在<strong>同一时间</strong>进行 声明，初始化和内存分配的，至少在使用的时候可以这么认为。<br><strong>基本数据类型没有声明的概念。</strong></p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">所以如下代码：</span><br><span class="line"><span class="keyword">int</span> top;</span><br><span class="line"><span class="keyword">printf</span>(<span class="string">"<span class="variable">%p</span>\n"</span>, &amp;top);</span><br><span class="line">能够获得top的地址。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自定义数据类型<br>由于不像基本数据类型一样已经规定好内存分配，字节数等信息，所以需要<strong>声明并且初始化</strong>。</p>
+</li>
+<li>技巧<br>为了避免传入空指针到函数中，可以定义一个基本数据类型，然后<strong>&amp;之后再传进去</strong>，而不是定义基本数据类型的指针，因为指针不会自动初始化。</li>
+<li>注意点<br>保险起见，非基本数据类型要显式初始化。</li>
+</ol>
+</li>
+<li><h1 id="u6307_u9488_u53C2_u6570"><a href="#u6307_u9488_u53C2_u6570" class="headerlink" title="指针参数"></a>指针参数</h1><ol>
+<li>指针传参<br>指针作为参数传入函数时，会复制一个指针，该指针的指向（指针参数的值）不变，但是这个指针是一个不同的变量，因为他的<strong>地址不再是传入的那个指针的地址（&amp;p）</strong>，所以实参和形参唯一有关联的是指针变量的值（指向的那个地址是一样的），所以重点是要<strong>修改形参所指向的内容（*p）</strong>,而不是修改指针的指向（p）,修改指向是没有用的。</li>
+<li>有关数据结构<br>对于数据结构来说，如果能deep copy就尽量deep copy，这样的话可以把数据复制到一个独立的空间中，在这个独立的空间中统一管理数据结构中的数据。而且不用像第一点那样，在形参指针和实参指针之间出现转换，赋值等错误。</li>
+<li>deep_copy<br>memcop()函数能够将一个指针指向的内容复制给一个新的指针。</li>
+</ol>
+</li>
+</ol>
+
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/c/" rel="tag">#c</a>
+          
+        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/12/Scrapy/" rel="next" title="Scrapy">
-                <i class="fa fa-chevron-left"></i> Scrapy
+              <a href="/2016/07/25/静态库与共享库/" rel="next" title="静态库与共享库">
+                <i class="fa fa-chevron-left"></i> 静态库与共享库
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/09/Vim/" rel="prev" title="Vim">
-                Vim <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -416,7 +437,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C_u58F0_u660E_u4E0E_u521D_u59CB_u5316"><span class="nav-number">1.</span> <span class="nav-text">C声明与初始化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u6307_u9488_u53C2_u6570"><span class="nav-number">2.</span> <span class="nav-text">指针参数</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

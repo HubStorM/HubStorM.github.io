@@ -241,6 +241,112 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/25/C/" itemprop="url">
+                  C
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-25T00:34:28+08:00" content="2016-07-25">
+              2016-07-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程语言/" itemprop="url" rel="index">
+                    <span itemprop="name">编程语言</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <ol>
+<li><h1 id="C_u58F0_u660E_u4E0E_u521D_u59CB_u5316"><a href="#C_u58F0_u660E_u4E0E_u521D_u59CB_u5316" class="headerlink" title="C声明与初始化"></a>C声明与初始化</h1>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/25/C/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/25/静态库与共享库/" itemprop="url">
                   静态库与共享库
                 </a>
@@ -304,7 +410,26 @@
           
             <ol>
 <li><h1 id="u9759_u6001_u5E93"><a href="#u9759_u6001_u5E93" class="headerlink" title="静态库"></a>静态库</h1><ol>
-<li>静态库的创建</li>
+<li><p>静态库的创建</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ar rcs		<span class="operator"><span class="keyword">create</span></span><br><span class="line"> ar tv		<span class="keyword">show</span></span><br><span class="line"> ar <span class="keyword">d</span>		<span class="keyword">delete</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>静态库搜索目录的环境变量及标准目录</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. export <span class="constant">LIBRARY_PATH</span>=<span class="constant">XXX</span>:<span class="variable">$LIBRARY_PATH</span></span><br><span class="line">  <span class="number">2</span>. /<span class="class"><span class="keyword">lib</span>  /<span class="title">usr</span>/<span class="title">lib</span>  /<span class="title">usr</span>/<span class="title">local</span>/<span class="title">lib</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>静态库的使用：三种方式</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.链接的时候指定静态库的名称。</span><br><span class="line"><span class="number">2</span>.将静态库放置在标准目录中，如/usr/<span class="class"><span class="keyword">lib</span>，然后使用-<span class="title">l</span>选项</span></span><br><span class="line"><span class="number">3</span>.-<span class="constant">L</span>指定静态库的路径，-l指定静态库的名称，不加空格</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><h1 id="u52A8_u6001_u5E93"><a href="#u52A8_u6001_u5E93" class="headerlink" title="动态库"></a>动态库</h1><ol>
+<li><p>动态库的创建</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">分步：</span><br><span class="line">	gcc -g -c -fPIC -Wall mod1<span class="class">.c</span> mod2<span class="class">.c</span></span><br><span class="line">	gcc -g -shared -o libmod<span class="class">.so</span> mod1<span class="class">.o</span> mod2<span class="class">.o</span></span><br><span class="line">合并：</span><br><span class="line">	gcc -g -fPIC -Wall mod1<span class="class">.c</span> mod2<span class="class">.c</span> -shared -o libmod.so</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>动态库的搜索路径及标准路径</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. export <span class="constant">LD_LIBRARY_PATH</span>=<span class="constant">XXX</span>:<span class="variable">$LD_LIBRARY_PATH</span></span><br><span class="line"><span class="number">2</span>. /<span class="class"><span class="keyword">lib</span>  /<span class="title">usr</span>/<span class="title">lib</span>  /<span class="title">usr</span>/<span class="title">local</span>/<span class="title">lib</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>动态库的使用</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">需要在运行时帮助链接器找到动态库所在位置,这是由于可执行文件在运行时才会链接动态库的内容,而静态库在链接的时候就已经将库包含进可执行文件中。                          </span><br><span class="line">gcc -g -c -Wall mod<span class="class">.c</span></span><br><span class="line">gcc -g -o outname mod<span class="class">.o</span> -lsoname</span><br></pre></td></tr></table></figure></li>
 </ol>
 </li>
 </ol>
@@ -409,31 +534,13 @@
 
       
         
-          
-            <ol>
-<li><h1 id="u5B89_u88C5_u4E0E_u7F16_u8BD1"><a href="#u5B89_u88C5_u4E0E_u7F16_u8BD1" class="headerlink" title="安装与编译"></a>安装与编译</h1><ol>
-<li><p>安装</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo ./configure</span><br><span class="line">sudo <span class="built_in">make</span></span><br><span class="line">sudo <span class="built_in">make</span> install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编译</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -g -c -Wall besselFunction<span class="class">.c</span></span><br><span class="line">gcc -g -o besselFunction besselFunction<span class="class">.o</span> -lgsl -lgslcblas -lm</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-</ol>
-<ol>
-<li><p>函数与变量类型</p>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//包含头文件</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;gsl/gsl_foo.h&gt;</span></span></span><br></pre></td></tr></table></figure>
-<ol>
-<li>函数<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gsl_foo_fn				<span class="keyword">double</span></span><br><span class="line">gsl_foo_long_double_fn	<span class="keyword">long</span> <span class="keyword">double</span></span><br><span class="line">gsl_foo_float_fn		<span class="keyword">float</span></span><br><span class="line">gsl_foo_long_fn			<span class="keyword">long</span></span><br><span class="line">gsl_foo_ulong_fn		<span class="keyword">unsigned</span> <span class="keyword">long</span></span><br><span class="line">gsl_foo_int_fn			<span class="keyword">int</span></span><br><span class="line">gsl_foo_uint_fn			<span class="keyword">unsigned</span> <span class="keyword">int</span></span><br><span class="line">gsl_foo_short_fn		<span class="keyword">short</span></span><br><span class="line">gsl_foo_ushort_fn		<span class="keyword">unsigned</span> <span class="keyword">short</span></span><br><span class="line">gsl_foo_char_fn			<span class="keyword">char</span></span><br><span class="line">gsl_foo_uchar_fn		<span class="keyword">unsigned</span> <span class="keyword">char</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-</ol>
-<pre><code>1. 变量
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gsl_foo					<span class="keyword">double</span></span><br><span class="line">gsl_foo_long_double		<span class="keyword">long</span> <span class="keyword">double</span></span><br><span class="line">gsl_foo_float			<span class="keyword">float</span></span><br><span class="line">gsl_foo_long			<span class="keyword">long</span></span><br><span class="line">gsl_foo_ulong			<span class="keyword">unsigned</span> <span class="keyword">long</span></span><br><span class="line">gsl_foo_int				<span class="keyword">int</span></span><br><span class="line">gsl_foo_uint			<span class="keyword">unsigned</span> <span class="keyword">int</span></span><br><span class="line">gsl_foo_short			<span class="keyword">short</span></span><br><span class="line">gsl_foo_ushort			<span class="keyword">unsigned</span> <span class="keyword">short</span></span><br><span class="line">gsl_foo_char			<span class="keyword">char</span></span><br><span class="line">gsl_foo_uchar			<span class="keyword">unsigned</span> <span class="keyword">char</span></span><br></pre></td></tr></table></figure>
-</code></pre>
-          
+          <ol>
+<li><h1 id="u5B89_u88C5_u4E0E_u7F16_u8BD1"><a href="#u5B89_u88C5_u4E0E_u7F16_u8BD1" class="headerlink" title="安装与编译"></a>安装与编译</h1>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/25/GNU科学计算工具gsl/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1211,120 +1318,12 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/28/Bayesian-Reasoning-and-Machine-Learning/" itemprop="url">
-                  Bayesian Reasoning and Machine Learning
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-28T22:33:53+08:00" content="2016-02-28">
-              2016-02-28
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/reading-notes/" itemprop="url" rel="index">
-                    <span itemprop="name">reading notes</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <ol>
-<li><h1 id="ch2_3A_u57FA_u672C_u56FE_u6982_u5FF5"><a href="#ch2_3A_u57FA_u672C_u56FE_u6982_u5FF5" class="headerlink" title="ch2:基本图概念"></a>ch2:基本图概念</h1><p> path：A-＞B<br> 祖先（ancestors）：A ，有向图<br> 子孙（descendants）：B，有向图</p>
-<p> Markov blanket:一个节点的parents，children，children’s parents，不包括自己。MB包含了这个节点的所有信息，所有不属于MB(xi)的节点都与xi在MB(xi)条件下独立。<br> <img src="http://i.imgur.com/h8wrtHS.png" alt=""><br> cycle：有向的路径，起点和终点相同。<br> loop：无向路径，起点和终点相同。<br> chord：在loop中连接不相邻顶点的边。</p>
-<p> 无向图中的概念：<br> clique：所有顶点都相连的集合</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/28/Bayesian-Reasoning-and-Machine-Learning/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1365,7 +1364,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1379,7 +1378,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
